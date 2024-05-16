@@ -86,108 +86,22 @@
             width: 100%;
         }
 
-        @media only screen and (min-width: 600px) {
-
-            /* For tablets: */
-            .col-s-1 {
-                width: 8.33%;
-            }
-
-            .col-s-2 {
-                width: 16.66%;
-            }
-
-            .col-s-3 {
-                width: 25%;
-            }
-
-            .col-s-4 {
-                width: 33.33%;
-            }
-
-            .col-s-5 {
-                width: 41.66%;
-            }
-
-            .col-s-6 {
-                width: 50%;
-            }
-
-            .col-s-7 {
-                width: 58.33%;
-            }
-
-            .col-s-8 {
-                width: 66.66%;
-            }
-
-            .col-s-9 {
-                width: 75%;
-            }
-
-            .col-s-10 {
-                width: 83.33%;
-            }
-
-            .col-s-11 {
-                width: 91.66%;
-            }
-
-            .col-s-12 {
-                width: 100%;
-            }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
         }
 
-        @media only screen and (min-width: 768px) {
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
 
-            /* For desktop: */
-            .col-1 {
-                width: 8.33%;
-            }
-
-            .col-2 {
-                width: 16.66%;
-            }
-
-            .col-3 {
-                width: 25%;
-            }
-
-            .col-4 {
-                width: 33.33%;
-            }
-
-            .col-5 {
-                width: 41.66%;
-            }
-
-            .col-6 {
-                width: 50%;
-            }
-
-            .col-7 {
-                width: 58.33%;
-            }
-
-            .col-8 {
-                width: 66.66%;
-            }
-
-            .col-9 {
-                width: 75%;
-            }
-
-            .col-10 {
-                width: 83.33%;
-            }
-
-            .col-11 {
-                width: 91.66%;
-            }
-
-            .col-12 {
-                width: 100%;
-            }
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
         }
     </style>
 </head>
@@ -209,25 +123,127 @@
 
 <!DOCTYPE html>
 <html>
-<style>
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
 
-    .column {
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-    }
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-    }
-</style>
+        .container {
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            height: 100%;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            transition: .3s ease;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .icon {
+            color: rgb(6, 250, 87);
+            font-size: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .fa-user:hover {
+            color: #eee;
+        }
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"><style>.container {
+            position: relative;
+            font-family: Arial;
+        }
+
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(245, 244, 244);
+            color: rgb(233, 10, 10);
+            opacity: 1;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+
 
 <center>
     <div class="header">
@@ -236,67 +252,96 @@
 </center>
 
 
+
+
 <div class="row">
 
     <div class="column">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyssj95gbc7wyOy0Ot3r_SKBuMyboqA7iTFRUlYGPIg&s"
-            style="width:100%">
-        <img src="https://wakefulascent.com/wp-content/uploads/2022/11/sara-kaiser-wakeful-ascent-aerial-arts-aerial-silks-scaled.jpg"
-            style="width:100%">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMY2SpA9IYmenkGu3NytnWXSFMhNDYlPfnSNtLUgotCA&s"
-            style="width:100%">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYYthjbtWAL5eFHvaH7TFDjaaY6Q1p0W-Gq3v126wEiw&s"
-            style="width:100%">
-        <img src="https://images.squarespace-cdn.com/content/v1/56f5873586db433fc5ab9be2/acd4eb7b-58f9-4e43-8322-11ce107c1845/AdobeStock_92834043.jpeg"
-            style="width:100%">
-        <img src="https://www.technogym.com/wpress/wp-content/uploads/2019/07/Male-Vertical-Aerial-Silks.jpg"
-            style="width:100%">
-        <img src="https://images.squarespace-cdn.com/content/v1/56f5873586db433fc5ab9be2/a446d959-f107-4eee-a12d-70badfb0efee/skylinefilter.jpg"
-            style="width:100%">
+
+        <div class="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyssj95gbc7wyOy0Ot3r_SKBuMyboqA7iTFRUlYGPIg&s"
+                style="width:100%" alt="Avatar" class="image">
+            <div class="overlay">Aerialist On Silks</div>
+        </div>
+
+        <div class="container">
+            <img src="https://wakefulascent.com/wp-content/uploads/2022/11/sara-kaiser-wakeful-ascent-aerial-arts-aerial-silks-scaled.jpg"
+                style="width:100%" alt="Avatar" class="image">
+            <div class="overlay">Split On Silks</div>
+        </div>
+
+        <div class="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMY2SpA9IYmenkGu3NytnWXSFMhNDYlPfnSNtLUgotCA&s"
+                style="width:100%" alt="Avatar" class="image">
+            <div class="overlay">Backbend On Silks</div>
+        </div>
+
     </div>
 
     <div class="column">
-        <img src="https://cdn.britannica.com/61/234761-050-34E975F0/Great-Dane-compared-French-Bulldog.jpg"
-            style="width:100%">
-        <img src="https://www.thesprucepets.com/thmb/DrbC35E5L8GxriqBs5L7YjLIYHM=/1280x0/filters:no_upscale():strip_icc()/great-dane-129741288-resized-56a26a905f9b58b7d0c9fe74.jpg"
-            style="width:100%">
-        <img src="https://d.newsweek.com/en/full/2159703/dudley-dog-01.jpg?w=1200&f=69f3713137f3a139520ed5ba6b3cf75e"
-            style="width:100%">
-        <img src="https://floridafurbabies.com/azure/sunshinestatepups/pups/mini-bernedoodle-bernedette-665242580663630.jpg?preset=detailg"
-            style="width:100%">
-        <img src="https://dogacademy.org/blog/wp-content/uploads/2022/08/Maltese-poodle-puppy-laying-on-back-on-carpet.jpg"
-            style="width:100%">
-        <img src="https://img.artpal.com/488472/1-23-3-20-0-5-51m.jpg" style="width:100%">
+
+        <div class="container">
+            <img src="https://cdn.britannica.com/61/234761-050-34E975F0/Great-Dane-compared-French-Bulldog.jpg"
+                style="width:100%" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="#" class="icon" title="User Profile">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="https://www.thesprucepets.com/thmb/DrbC35E5L8GxriqBs5L7YjLIYHM=/1280x0/filters:no_upscale():strip_icc()/great-dane-129741288-resized-56a26a905f9b58b7d0c9fe74.jpg"
+                style="width:100%" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="#" class="icon" title="User Profile">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="https://d.newsweek.com/en/full/2159703/dudley-dog-01.jpg?w=1200&f=69f3713137f3a139520ed5ba6b3cf75e"
+                style="width:100%" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="#" class="icon" title="User Profile">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <div class="column">
-        <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2023/02/female-dumbbells-1296x728-header-1296x729.jpg?w=1155&h=2268"
-            style="width:100%">
-        <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/fit_woman_doing_dumbbell_workout.jpg?itok=9Io03Tjp"
-            style="width:100%">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8IR-p7XnigzUfN4Q2xtRXVyJNbONz7bgwpfZ7IphB16DqOwN1VvdnITEz2UdYAaNokiQ&usqp=CAU"
-            style="width:100%">
-        <img src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/149879/149879_00_2x.jpg" style="width:100%">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGHR_Ci9lZcFAVWJyq0behoSyF8uX_00iFenKC2i2TOHpLKXsjO1XD_mNLPE5zSE87HMw&usqp=CAU"
-            style="width:100%">
-        <img src="https://lh4.googleusercontent.com/ve3ZhTQgBbJ4Yh2AphDbbdXUvrB_DR7iZd5wLGnjlIFJwDgKAYTOFJQ-G1cgtsVMqFhpBWB1vnCDcEfng770aumJyffm-UpP88IUJ2dzJm3AcUfiA-3pISvAcQ7Njg_lnZ52qLRVqLHAR5eyWjoTl8g"
-            style="width:100%">
-        <img src="https://i.pinimg.com/originals/54/cc/ce/54cccee53b8828d58654122557458bbb.jpg" style="width:100%">
+
+        <div class="container">
+            <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2023/02/female-dumbbells-1296x728-header-1296x729.jpg?w=1155&h=2268"
+                style="width:200%" alt="Norway" style="width:100%;">
+            <div class="text-block">
+                <h4>Lift Heavy</h4>
+                <p>Sign up today!</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/fit_woman_doing_dumbbell_workout.jpg?itok=9Io03Tjp"
+                style="width:200%" alt="Norway" style="width:100%;">
+            <div class="text-block">
+                <h4>Get Stronger</h4>
+                <p>Meal Plans</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8IR-p7XnigzUfN4Q2xtRXVyJNbONz7bgwpfZ7IphB16DqOwN1VvdnITEz2UdYAaNokiQ&usqp=CAU"
+                style="width:200%" alt="Norway" style="width:100%;">
+            <div class="text-block">
+                <h4>Personal Training</h4>
+                <p>Let's Go!</p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="column">
-        <img src="https://cdn.choosechicago.com/uploads/2022/09/Pink-skyline-with-out-logo.jpeg" style="width:100%">
-        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/5-chicago-illinois-skyline-pgiam.jpg"
-            style="width:100%">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/df/65/c1/caption.jpg?w=1200&h=-1&s=1"
-            style="width:100%">
-        <img src="https://cdn.forevervacation.com/uploads/tour/images/tour_269_5818.webp?tr=w-560,h-638"
-            style="width:100%">
-        <img src="https://static.dezeen.com/uploads/2023/11/cab-5-thompson-center-installations_dezeen_2364_col_2-scaled.jpg"
-            style="width:100%">
-        <img src="https://i.huffpost.com/gen/1896225/thumbs/o-SMURFIT-STONE-BUILDING-900.jpg" style="width:100%">
-    </div>
-
-    </body>
 
 </html>
