@@ -3,27 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>About Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
     <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
-<nav>
-    <p style="text-align:right;">
-        <a href="./index.html">Home</a> |
-        <a href="./about.html">About</a> |
-        <a href="./Contact.html">Contact</a> |
-        <a href="./Portfolio.html">Portfolio</a> |
-        <a href="./Resume.html/">Resume</a> |
-        <a href="./Links.html/">Links</a>
-    </p>
-</nav>
+<body>
+
+    <nav class="navbar">
+        <p style="text-align:right;">
+            <a href="index.html">Home</a> |
+            <a href="./about.html">About</a> |
+            <a href="./Contact.html">Contact</a> |
+            <a href="./Portfolio.html">Portfolio</a> |
+            <a href="./resume.html">Resume</a> |
+            <a href="./links.html">Links</a>
+        </p>
+    </nav>
+
+</body>
+
+</html>
 
 
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-</head>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,111 +95,150 @@
             width: 100%;
         }
 
-        @media only screen and (min-width: 600px) {
-
-            /* For tablets: */
-            .col-s-1 {
-                width: 8.33%;
-            }
-
-            .col-s-2 {
-                width: 16.66%;
-            }
-
-            .col-s-3 {
-                width: 25%;
-            }
-
-            .col-s-4 {
-                width: 33.33%;
-            }
-
-            .col-s-5 {
-                width: 41.66%;
-            }
-
-            .col-s-6 {
-                width: 50%;
-            }
-
-            .col-s-7 {
-                width: 58.33%;
-            }
-
-            .col-s-8 {
-                width: 66.66%;
-            }
-
-            .col-s-9 {
-                width: 75%;
-            }
-
-            .col-s-10 {
-                width: 83.33%;
-            }
-
-            .col-s-11 {
-                width: 91.66%;
-            }
-
-            .col-s-12 {
-                width: 100%;
-            }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
         }
 
-        @media only screen and (min-width: 768px) {
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
 
-            /* For desktop: */
-            .col-1 {
-                width: 8.33%;
-            }
-
-            .col-2 {
-                width: 16.66%;
-            }
-
-            .col-3 {
-                width: 25%;
-            }
-
-            .col-4 {
-                width: 33.33%;
-            }
-
-            .col-5 {
-                width: 41.66%;
-            }
-
-            .col-6 {
-                width: 50%;
-            }
-
-            .col-7 {
-                width: 58.33%;
-            }
-
-            .col-8 {
-                width: 66.66%;
-            }
-
-            .col-9 {
-                width: 75%;
-            }
-
-            .col-10 {
-                width: 83.33%;
-            }
-
-            .col-11 {
-                width: 91.66%;
-            }
-
-            .col-12 {
-                width: 100%;
-            }
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
         }
     </style>
 </head>
+
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+</html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            height: 100%;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            transition: .3s ease;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .icon {
+            color: rgb(6, 250, 87);
+            font-size: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .fa-user:hover {
+            color: #eee;
+        }
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"><style>.container {
+            position: relative;
+            font-family: Arial;
+        }
+
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(245, 244, 244);
+            color: rgb(233, 10, 10);
+            opacity: 1;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+</html>
 
 
 <body>
