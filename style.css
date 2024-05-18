@@ -1,10 +1,48 @@
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: rgb(86, 84, 84);
+}
+
+. li {
+    float: left;
+}
+
+li a {
+    background-color: rgb(86, 84, 84);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+a {
+    background-color: rgb(86, 84, 84);
+    display: block;
+    padding: 8px;
+    text-align: center;
+}
+
+a:hover {
+    background-color: rgb(167, 126, 133);
+}
+
+
 body {
-    margin: 5px;
+    margin: 0px;
     font-family: sans-serif;
     font-size: 15px;
     text-align: left;
     padding: 15px;
-    line-height: 2.0;
+    display: inline;
 }
 
 main {
@@ -12,44 +50,7 @@ main {
     margin-right: 20px;
 }
 
-.header {
-    background-color: #e674c9;
-    color: #ffffff;
-    padding: 5px;
-}
 
-h1 {
-    text-align: left;
-}
-
-html {
-    font-family: "Arial Bold", arial;
-}
-
-navbar ul {
-    list-style-type: none;
-    background-color: black;
-    font-size: 14px;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
-
-navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: right;
-}
-
-navbar a:hover {
-    background-color: hsl(0%, 0%, 10%);
-}
-
-.navbarli {
-    float: right;
-}
 
 .container {
     display: grid;
@@ -57,7 +58,7 @@ navbar a:hover {
 }
 
 .box {
-    background-color: aquamarine;
+    background-color: rgb(252, 2, 69);
     color: aliceblue;
     font-size: ;
 }
@@ -94,38 +95,196 @@ navbar a:hover {
     display: table;
 }
 
-.header {
-    background-color: #e674c9;
-    color: #ffffff;
-    padding: 15px;
+.container {
+    display: grid;
+    grid-auto-flow: row;
 }
 
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.box {
+    background-color: rgb(235, 10, 179);
+    color: aliceblue;
+    font-size: ;
 }
 
-.menu li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+* {
+    box-sizing: border-box;
 }
 
-.menu li:hover {
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 56px;
+}
+
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.footer {
     background-color: #0099cc;
-}
-
-.aside {
-    background-color: #33b5e5;
-    padding: 15px;
     color: #ffffff;
     text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    font-size: 12px;
+    padding: 15px;
 }
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    color: #f1f1f1;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    transition: .3s ease;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+
+.icon {
+    color: rgb(6, 250, 87);
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.fa-user:hover {
+    color: #eee;
+}
+
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(245, 244, 244);
+    color: rgb(233, 10, 10);
+    opacity: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+
+div.scroll-container img {
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+.pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+
+}
+
+
+h2 {
+    color: pink;
+}
+
 
 .footer {
     background-color: #0099cc;
@@ -234,4 +393,14 @@ div.scroll-container img {
         flex: 50%;
         max-width: 50%;
     }
+}
+
+.pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
 }
